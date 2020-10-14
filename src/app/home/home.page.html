@@ -1,20 +1,86 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true">
+    <ion-item padding >
+   <ion-label style="text-align: center; font-family:'Comic Sans MS', cursive, sans-serif;">{{label1}}</ion-label> 
+    <ion-label style="text-align: center; font-family:'Comic Sans MS', cursive, sans-serif;">{{label2}}</ion-label>
+  </ion-item>
+
+  <!--hesap makinesi yapısı-->
+  <ion-grid>
+    <ion-row >
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('1')">1</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('2')">2</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('3')">3</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row >
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('4')">4</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('5')">5</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('6')">6</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row >
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('7')">7</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('8')">8</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('9')">9</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row >
+      <ion-col col-4>
+        <ion-button expand="block" (click)="birlestir('0')">0</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="operatoral('+')">+</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="operatoral('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row >
+      <ion-col col-4>
+        <ion-button expand="block" (click)="operatoral('*')">x</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="operatoral('/')">/</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button expand="block" (click)="islemyap()">=</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
